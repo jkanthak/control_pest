@@ -1,14 +1,7 @@
 
 <div class="bug-show">
-	<!-->
-	<% if !@bug.screenshot.blank? %>
-	<div class="screenshot">
-		<%= image_tag @bug.screenshot.url %>
-	</div>
-	<% end %>
-	</-->
-	
-	<!--> Heroku-necessitated hack for portfolio version.</-->
+
+	<%#= Heroku-necessitated hack for portfolio version, in lieu of test for @bug.screenshot %>
 	<div class="screenshot">
 		<%= image_tag("http://www.johnkanthak.com/portfolio/assets/fake_screenshot.png") %>	
 	</div>
