@@ -1,0 +1,45 @@
+
+<div class="bug-show">
+	
+	<% if !@bug.screenshot.blank? %>
+	<div class="screenshot">
+		<%= image_tag @bug.screenshot.url %>		
+	</div>
+	<% end %>
+
+		
+	<p>
+	  <b>Title:</b>
+	  <%= @bug.title %>
+	</p>
+	
+	<p>
+	  <b>Description:</b>
+	  <%= @bug.description %>
+	</p>
+	
+	<p>
+	  <b>Priority:</b>
+	  <%= priority_to_str(@bug.priority) %>
+	</p>
+	
+	<p>
+	  <b>Status:</b>
+	  <%= @bug.status %>
+	</p>
+	
+	<p>
+	  <b>Closed by:</b>
+	  <%= @bug.closed_by %>
+	</p>
+	
+	<p>
+	  <b>Comment:</b>
+	  <%= @bug.comment %>
+	</p>
+	
+	
+	<%= link_to 'Edit', edit_bug_path(@bug) %> |
+	<%= link_to 'Back', bugs_path %>
+	
+</div>
